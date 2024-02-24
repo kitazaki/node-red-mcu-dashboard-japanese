@@ -13,8 +13,10 @@ https://raw.github.com/nakamura001/JIS_CharacterSet/master/SHIFTJIS_custom/SHIFT
 # 手順
 
 node-red-mcuのdashboardノードのmanifest.jsonとui_templates.jsを置き換えます。
+
 assetsフォルダにNoto-Regular.fntとNoto-Regular.pngファイルを置きます。
 
+```
 node-red-mcu/nodes/dashboard
 ├── ScrollerBehaviors.js
 ├── assets
@@ -40,6 +42,7 @@ node-red-mcu/nodes/dashboard
 ├── ui_nodes.js
 ├── ui_templates.js            (←変更)
 └── ui_text_input.js
+```
 
 (変更前)
 
