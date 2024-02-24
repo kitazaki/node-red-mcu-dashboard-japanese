@@ -1,0 +1,182 @@
+[
+    {
+        "id": "2850f35f75df23f3",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "6f25147b3fbdcb14",
+        "type": "ui_button",
+        "z": "2850f35f75df23f3",
+        "name": "",
+        "group": "e6c51ee3d8c53c19",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ボタンA",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "A",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "e21165264019e11a"
+            ]
+        ]
+    },
+    {
+        "id": "e21165264019e11a",
+        "type": "ui_text",
+        "z": "2850f35f75df23f3",
+        "group": "e6c51ee3d8c53c19",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 370,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0847560dfe136935",
+        "type": "ui_button",
+        "z": "2850f35f75df23f3",
+        "name": "",
+        "group": "e6c51ee3d8c53c19",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ボタンB",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "B",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 200,
+        "y": 140,
+        "wires": [
+            [
+                "e21165264019e11a"
+            ]
+        ]
+    },
+    {
+        "id": "c56117b1e921242d",
+        "type": "mqtt in",
+        "z": "2850f35f75df23f3",
+        "name": "",
+        "topic": "/mqtt",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0808ed4664ea2b64",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "e21165264019e11a"
+            ]
+        ]
+    },
+    {
+        "id": "e6c51ee3d8c53c19",
+        "type": "ui_group",
+        "name": "デフォルト",
+        "tab": "9d37bb202717d924",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": "",
+        "_mcu": {
+            "mcu": false
+        }
+    },
+    {
+        "id": "0808ed4664ea2b64",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.3.20",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": "",
+        "_mcu": {
+            "mcu": false
+        }
+    },
+    {
+        "id": "9d37bb202717d924",
+        "type": "ui_tab",
+        "name": "ホーム",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false,
+        "_mcu": {
+            "mcu": false
+        }
+    }
+]
